@@ -20,6 +20,7 @@
 		"@typescript-eslint"
 	],
 	"rules": {
+		"react/jsx-indent-props": "off",
 		"react/jsx-indent": "off",
 		"indent": "off",
 		"no-tabs": "off",
