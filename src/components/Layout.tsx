@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Bottombar from './Bottombar';
 import Topbar from './Topbar';
 
 interface ILayout {
-	children: React.ReactNode
+	children: ReactNode
 }
+
+
 
 export function Layout(props: ILayout) {
 	const { children } = props;
 
 	return (
 		<>
-			<Topbar />
+			<div style={{
+				position: 'fixed', zIndex: 401, top: 0, width: '100%',
+			}}
+			>
+				<Topbar />
+			</div>
 			{children}
-			<div style={{ position: 'fixed', zIndex: 1000, bottom: 0, width: "100%" }}>
+			<div style={{
+				position: 'fixed', zIndex: 400, bottom: 0, width: '100%',
+			}}
+			>
 				<Bottombar />
 			</div>
 		</>
