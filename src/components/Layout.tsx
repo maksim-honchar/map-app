@@ -6,17 +6,12 @@ interface ILayout {
 	children: ReactNode
 }
 
-
-
 export function Layout(props: ILayout) {
 	const { children } = props;
 
 	return (
 		<>
-			<div style={{
-				position: 'fixed', zIndex: 401, top: 0, width: '100%',
-			}}
-			>
+			<div>
 				<Topbar />
 			</div>
 			{children}
